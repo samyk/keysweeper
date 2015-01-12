@@ -33,10 +33,11 @@ KeySweeper has the capability to send SMS alerts upon certain keystrokes being t
 KeySweeper extends the work of Travis Goodspeed on the [goodfet.nrf](http://travisgoodspeed.blogspot.co.uk/2011/02/promiscuity-is-nrf24l01s-duty.html) project and of Thorsten Schröder and Max Moser of the [KeyKeriki v2.0](http://www.remote-exploit.org/?page_id=602) project.
 
 
-[![Microsoft Wireless Keyboard 800](http://samy.pl/keysweeper/kbsmall.jpg)](http://samy.pl/keysweeper/kb.jpg)
-
+[![SMS from KeySweeper](http://samy.pl/keysweeper/sms.png)](http://samy.pl/keysweeper/sms.png)
 
 # (U) Hardware
+
+[![Microsoft Wireless Keyboard 800](http://samy.pl/keysweeper/kbsmall.jpg)](http://samy.pl/keysweeper/kb.jpg)
 
 ### Arduino / Teensy microcontroller
 **$3 - 30**: An [Arduino](http://arduino.cc/en/Main/ArduinoBoardProMini) or [Teensy](https://www.pjrc.com/teensy/) microcontroller can be used. In my build, I use an 3.3v Arduino Pro Mini due to its very thin profile.
