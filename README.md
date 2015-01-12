@@ -30,7 +30,7 @@ All keystrokes are logged online and locally. SMS alerts are sent upon trigger w
 
 **[KeySweeper](http://samy.pl/keysweeper)** is a stealthy Arduino-based device, camouflaged as a functioning USB wall charger, that wirelessly and passively sniffs, decrypts, logs and reports back all keystrokes from any Microsoft wireless keyboards (which use a proprietary 2.4GHz RF protocol) in the area.
 
-Keystrokes are sent back to the KeySweeper operator over the Internet via an optional GSM chip, or can be stored on a flash chip and delivered wirelessly when a secondary KeySweeper device comes within wireless range of the target KeySweeper.
+Keystrokes are sent back to the KeySweeper operator over the Internet via an optional GSM chip, or can be stored on a flash chip and delivered wirelessly when a secondary KeySweeper device comes within wireless range of the target KeySweeper. A web based tool allows live keystroke monitoring.
 
 KeySweeper has the capability to send SMS alerts upon certain keystrokes being typed, e.g. "www.bank.com". If KeySweeper is removed from AC power, it appears to shut off, however it continues to operate covertly using an internal battery that is automatically recharged upon reconnecting to AC power.
 
