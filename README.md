@@ -1,14 +1,16 @@
 **KEYSWEEPER // SIGINT // SAMY.PL // REL TO ALL // APPLIED HACKING**
 
-# KeySweeper
+# [KeySweeper](http://samy.pl/keysweeper/)
 
 **[KeySweeper](http://samy.pl/keysweeper)** is a stealthy Arduino-based device, camouflaged as a functioning USB wall charger, that wirelessly and passively sniffs, decrypts, logs and reports back (over GSM) all keystrokes from any Microsoft wireless keyboard in the vicinity.
 
 All keystrokes are logged online and locally. SMS alerts are sent upon trigger words, usernames or URLs, exposing passwords. If unplugged, KeySweeper continues to operate using its internal battery and auto-recharges upon repowering. A web based tool allows live keystroke monitoring.
 
-[![KeySweeper Live Monitoring Tool](http://samy.pl/keysweeper/spysmall.png)](http://samy.pl/keysweeper/spy.png)
+<a href="https://www.youtube.com/watch?v=WqkmGG0biXc" target="_blank"><img src="http://img.youtube.com/vi/WqkmGG0biXc/0.jpg" alt="KeySweeper" width="640" height="480" border="10" /></a>
 
 [![KeySweeper](http://samy.pl/keysweeper/keysweepersmall.jpg)](http://samy.pl/keysweeper/keysweeper.jpg)
+
+[![KeySweeper Live Monitoring Tool](http://samy.pl/keysweeper/spysmall.png)](http://samy.pl/keysweeper/spy.png)
 
 **Point of Contact:** [@SamyKamkar](https://twitter.com/samykamkar) // <code@samy.pl> // <http://samy.pl>
 
@@ -19,6 +21,8 @@ All keystrokes are logged online and locally. SMS alerts are sent upon trigger w
 **Unit Cost:** $10 - 80 depending on operation
 
 **Status:** Operational, open source, open hardware, declassified.
+
+-----
 
 # (U) Capabilities
 
@@ -34,6 +38,8 @@ KeySweeper extends the work of Travis Goodspeed on the [goodfet.nrf](http://trav
 
 
 [![SMS from KeySweeper](http://samy.pl/keysweeper/sms.png)](http://samy.pl/keysweeper/sms.png)
+
+-----
 
 # (U) Hardware
 
@@ -68,6 +74,8 @@ Using this, no flash chip is necessary as keystrokes are immediately sent to a b
 [![KeySweeper unplugged](http://samy.pl/keysweeper/usbside.jpg)](http://samy.pl/keysweeper/usbside.jpg)
 
 
+-----
+
 # (U) Software
 
 ### KeySweeper
@@ -86,6 +94,8 @@ I've created a backend tool that allows you to monitor keyboards live through a 
 
 [![KeySweeper Live Monitoring Tool](http://samy.pl/keysweeper/spysmall.png)](http://samy.pl/keysweeper/spy.png)
 
+
+-----
 
 # (U) Determining Keyboard Wireless Protocol
 
@@ -113,6 +123,8 @@ Looking at the [nRF24L01+ datasheet](https://www.sparkfun.com/datasheets/Compone
 ![http://samy.pl/keysweeper/Amfm3-en-de.gif](http://samy.pl/keysweeper/Amfm3-en-de.gif)
 
 
+-----
+
 # (U) Sniffing Proprietary 2.4GHz Signals
 
 While I would normally pull out something like a HackRF or RTL-SDR with digital down converter (to get 2.4GHz into RTL-SDR range), it would be really nice if we could sniff with more inexpensive hardware, as ultimately I want to package everything up into a device that can be left in the field.
@@ -126,6 +138,8 @@ Travis found that sniffing with the device is traditionally difficult because no
 However when specifying the length of the MAC, Travis found there is one option which is considered "illegal" in the datasheet (`SETUP_AW, 0x03 set to 00`), but actually sets the MAC to 2 bytes! Also, by setting the MAC to data that would typically be found in the preamble (`0x00AA or 0x0055, in binary 0000000010101010 or 0000000001010101`), we can fool the device into giving us the packet early, providing a full MAC address to us in the data portion! Read his [great write-up](http://travisgoodspeed.blogspot.com/2011/02/promiscuity-is-nrf24l01s-duty.html) for all the details.
 
 [![Microsoft USB Dongle](http://samy.pl/keysweeper/usbsmall.jpg)](http://samy.pl/keysweeper/usb.jpg)
+
+-----
 
 # (U) Increasing Speed and Portability
 
@@ -149,6 +163,7 @@ This means to scan the full range of frequencies, it takes ~85 minutes and at le
 * because we know the first byte of our MAC (0xCD), and we also know certain packets to look for, we simply detect only those packets which means we only ever need to see a single packet to be confident that it is in fact a keyboard
 * we reduce the scan per frequency to 500ms, causing our scan to take under 40 seconds to complete one full sweep
 
+-----
 
 # (U) Decrypting Keystrokes
 
@@ -182,6 +197,8 @@ void decrypt(uint8_t* pkt)
     pkt[i] ^= mac >> (((i - 4) % 5) * 8) & 0xFF;
 }
 ```
+
+-----
 
 # (U) Building / Usurping a USB Charger
 
@@ -223,6 +240,8 @@ We also want to make sure we leave the rest of the USB charger operational so th
 
 ![http://samy.pl/keysweeper/testusb.jpg](http://samy.pl/keysweeper/testusb.jpg)
 
+-----
+
 # (U) Optional Secondary KeySweeper
 If you wish to forgo the GSM board to keep costs down, you can create a secondary KeySweeper device simply containing an Arduino and nRF24L01+. While compiling the secondary one, uncomment the `#define BACKTRACER 1`.
 
@@ -230,6 +249,7 @@ The way this works is if the secondary KeySweeper (BACKTRACER) ever comes within
 
 If you have the BACKTRACER hooked up to a computer, the keylogs will be dumped to serial, and you can send an 'E' command over serial to erase the contents of the original KeySweeper's SPI Flash chip now that you've obtained its contents. You can walk away allowing the original KeySweeper to continue logging keystrokes.
 
+-----
 
 # (U) Schematic
 
@@ -237,6 +257,8 @@ Click for larger version (FONA-based schematic), or [click here](http://samy.pl/
 
 [![Schematic with GSM board](http://samy.pl/keysweeper/keysweeper2_schemsmall.png)](http://samy.pl/keysweeper/keysweeper2_schem.png)
 
+
+-----
 
 # (U) Contact
 
