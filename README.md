@@ -6,7 +6,10 @@
 
 All keystrokes are logged online and locally. SMS alerts are sent upon trigger words, usernames or URLs, exposing passwords. If unplugged, KeySweeper continues to operate using its internal battery and auto-recharges upon repowering. A web based tool allows live keystroke monitoring.
 
+**Live demonstration** and full details available in the video:
 <a href="https://www.youtube.com/watch?v=WqkmGG0biXc" target="_blank"><img src="http://img.youtube.com/vi/WqkmGG0biXc/0.jpg" alt="KeySweeper" width="640" height="480" border="10" /></a>
+
+-----
 
 [![KeySweeper](http://samy.pl/keysweeper/keysweepersmall.jpg)](http://samy.pl/keysweeper/keysweeper.jpg)
 
