@@ -365,7 +365,7 @@ void sendSms(uint8_t j)
 {
   pr("Found trigger word: ");
   Serial.println(j);
-#ifdef GSM_ENABLED
+#ifdef ENABLE_GSM
   pr("Sending SMS: ");
   Serial.println(stack);
 
