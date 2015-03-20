@@ -266,7 +266,9 @@ void push(uint8_t val)
 {
   stack[stackptr++] = val;
   if (stackptr > STACKLEN-1)
-    stackptr = 0;
+  {
+    clearStack();
+  }
 }
 
 // if you're looking at this, you found a secret function...
@@ -347,8 +349,10 @@ char gotKeystroke(uint8_t* p)
   // do we have a trigger word?
   for (uint8_t i = 0; i < TRIGGERS; i++)
     // we do!
-    if (strlen(triggers[i]) && strstr(stack, triggers[i]))
+    if (strstr(stack, triggers[i]) != NULL)
+    {
       sendSms(i);
+    }
 
   // store in flash for retrieval later
   storeKeystroke(letter);
@@ -376,7 +380,15 @@ void sendSms(uint8_t j)
 #endif
 
   // clear our array so we don't trigger again
-  memset(&stack, 0, STACKLEN);  
+  clearStack(); 
+}
+
+void clearStack()
+//clears the stack and resets the stackptr back to 0!
+{
+  memset(&stack, 0, sizeof(stack));
+  prl("STACK CLEARED");
+  stackptr = 0;
 }
 
 void sendKeystroke(char letter)
