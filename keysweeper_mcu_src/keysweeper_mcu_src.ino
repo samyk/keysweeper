@@ -267,7 +267,6 @@ void push(uint8_t val)
   stack[stackptr++] = val;
   if (stackptr > STACKLEN-1)
   {
-    stackptr = 0;
     clearStack();
   }
 }
@@ -388,7 +387,7 @@ void clearStack()
 //clears the stack and resets the stackptr back to 0!
 {
   memset(&stack, 0, sizeof(stack));
-  pr("STACK CLEARED");
+  prl("STACK CLEARED");
   stackptr = 0;
 }
 
