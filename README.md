@@ -85,6 +85,13 @@ Using this, no flash chip is necessary as keystrokes are immediately sent to a b
 KeySweeper's source code can be obtained in entirety from my github: <https://github.com/samyk/keysweeper>
 
 There are multiple parts to KeySweeper. The primary code is installed on the microcontroller, while a web based backend using [jQuery](http://jquery.com/) and [PHP](http://php.net/) logs all keystrokes and provides a web interface for live monitoring of the target keyboards.
+
+KeySweeper also needs the following files from [maniacbug's RF24 library](https://github.com/maniacbug/RF24):
+* `RF24.h`
+* `nRF24L01.h`
+* `RF24_config.h`
+
+Just copy the files into the `keysweeper_mcu_src` directory. You also have to change the `#include` statement in the `RF24.h` file from `#include <RF24_config.h>` to `#include "RF24_config.h"`.
  
 ### Adafruit FONA library
 You should use [my version of the Adafruit FONA library](https://github.com/samyk/Adafruit_FONA_Library) as I include an additional option that allows the FONA to let us know when there's a new text message. In the original library, you must constantly poll to see if there are more text messages than you expect, however with my version you can enable an option `fona.setSMSInterrupt(1)` which causes the RI (Ring Interrupt) pin to pull low for a moment upon new SMS messages.
