@@ -25,8 +25,8 @@ The eagle cad designs, including the .brd file which is used when uploading to O
 
 
 The board is 2 inches in length.
+<img src="photos/keysweeper-brd-ruler.jpg" alt="Drawing" style="width: 400px;"/>
 
-![](photos/keysweeper-brd-ruler.jpg){ width: 400px; }
 
 The NRF24L01 board extends off the end of the board to provide less interference with the antenna.  The Arduino Mini is coupled to the daughter board with riser pins.
 
