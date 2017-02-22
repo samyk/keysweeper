@@ -14,9 +14,9 @@ The W25Q80BV chip
 
 ![](photos/winbond.png)
 
-A daughter board was designed in Eagle CAD, and fabricated by OSH Park,  which connected the W25Q80BV chip to the Arduino mini and NRF24L01.  Surface mount components were used to make the board lower smaller.
+A daughter board was designed in Eagle CAD, and fabricated by OSH Park, which connected the W25Q80BV chip to the Arduino mini and NRF24L01.  Surface mount components were used to make the board lower smaller.
 
-[Link to the osok GitHub where the Eagle CAD designs are]
+The eagle cad designs, including the .brd file which is used when uploading to OSHPark for board fabrication, can be found in the eagle directory.
 
 
 
