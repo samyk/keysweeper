@@ -34,11 +34,11 @@ The NRF24L01 board extends off the end of the board to provide less interference
 
 All the boards attached
 
-![](photos/attached.jpg)
+![](photos/attached.png)
 
 The battery that I choose was a 3.7 volt LiPo for small drones.
 
-![](photos/components.jpg)
+![](photos/components.png)
 
 Finally, some shrink wrap allows a neat little package.
 
