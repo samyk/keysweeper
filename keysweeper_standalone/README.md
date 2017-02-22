@@ -12,7 +12,7 @@ Samy.Pl page mentions that the W25Q80BV flash chip can be used, but didn&#39;t c
 
 The W25Q80BV chip
 
-![](photos/winbond.jpg)
+![](photos/winbond.png)
 
 A daughter board was designed in Eagle CAD, and fabricated by OSH Park,  which connected the W25Q80BV chip to the Arduino mini and NRF24L01.  Surface mount components were used to make the board lower smaller.
 
