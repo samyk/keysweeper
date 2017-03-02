@@ -21,9 +21,6 @@ The eagle cad designs, including the .brd file which is used when uploading to O
 
 
 
-
-
-
 The board is 2 inches in length.
 
 ![](photos/keysweeper-brd-ruler.jpg)
