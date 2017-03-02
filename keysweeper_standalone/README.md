@@ -21,6 +21,7 @@ The eagle cad designs, including the .brd file which is used when uploading to O
 
 
 
+
 The board is 2 inches in length.
 
 ![](photos/keysweeper-brd-ruler.jpg)
@@ -37,6 +38,7 @@ The battery that I choose was a 3.7 volt LiPo for small drones.
 
 ![](photos/components.png)
 
+
 Finally, some shrink wrap allows a neat little package.
 
 ![](photos/20160525_140904.jpg)
@@ -50,3 +52,4 @@ To have the board fabricated, upload the design to OSH Park.  You will need to o
 To have a stencil created for spreading solder paste you can upload the .brd file to OSH Stencil.  https://www.oshstencils.com/
 
 The updated code for the Arduino can be downloaded from my GitHub.
+https://github.com/osok
