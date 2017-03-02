@@ -14,11 +14,9 @@ The W25Q80BV chip
 
 ![](photos/winbond.png)
 
-A daughter board was designed in Eagle CAD, and fabricated by OSH Park,  which connected the W25Q80BV chip to the Arduino mini and NRF24L01.  Surface mount components were used to make the board lower smaller.
+A daughter board was designed in Eagle CAD, and fabricated by OSH Park, which connected the W25Q80BV chip to the Arduino mini and NRF24L01.  Surface mount components were used to make the board lower smaller.
 
-[Link to the osok GitHub where the Eagle CAD designs are]
-
-
+The eagle cad designs, including the .brd file which is used when uploading to OSHPark for board fabrication, can be found in the eagle directory.
 
 
 
@@ -34,11 +32,12 @@ The NRF24L01 board extends off the end of the board to provide less interference
 
 All the boards attached
 
-![](photos/attached.jpg)
+![](photos/attached.png)
 
 The battery that I choose was a 3.7 volt LiPo for small drones.
 
-![](photos/components.jpg)
+![](photos/components.png)
+
 
 Finally, some shrink wrap allows a neat little package.
 
@@ -53,5 +52,4 @@ To have the board fabricated, upload the design to OSH Park.  You will need to o
 To have a stencil created for spreading solder paste you can upload the .brd file to OSH Stencil.  https://www.oshstencils.com/
 
 The updated code for the Arduino can be downloaded from my GitHub.
-
 https://github.com/osok
